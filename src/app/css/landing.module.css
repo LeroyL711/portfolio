@@ -1,3 +1,8 @@
+#landing { 
+    /* background-image: url("../images/bg.jpg"); */
+    background-size: cover;
+}
+
 .socials{
     background-color: #e8e6e6;
     color: black;
@@ -32,7 +37,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100rem;
     margin: auto;
     padding: 5rem 0;
     min-height: calc(100dvh - 100px);
