@@ -1,0 +1,118 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #191716;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.navLogo {
+  font-size: 2rem;
+  margin-left: 30px;
+  transition: 0.2s;
+}
+
+.navLogo:hover{
+  color: #E6AF2E;
+}
+
+.navMenu {
+    display: none;
+}
+
+.navMenu ul, .desktopNav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  transition: all 0.3s;
+}
+
+.desktopNav ul {
+  margin-right: 15px;
+}
+
+.desktopNav ul li {
+  margin: 0 1rem;
+  transition: 0.3s;
+  scroll-behavior: smooth;
+}
+
+/* Stacks navIcon and label*/
+.navMenu ul li a, .desktopNav ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMenu ul li:hover, .desktopNav ul li:hover {
+  color: #635baa;
+}
+
+.navIcons {
+  display: block;
+  text-align: center;
+}
+
+.hamburger {
+  /* removes default border on button element */
+  border: 0;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .desktopNav {
+    display: none;
+  }
+  
+  .navMenu {
+    display: block;
+  }
+
+  .navMenu ul{
+    /* Hidden visibility + opacity 0 allows for fade-in effect when opening menu */
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    border-top: solid 1px black;
+  }
+
+  .navMenu.expanded ul{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navMenu ul li {
+    background-color: black;
+    margin: 0;
+    transition: 0.3s;
+  }
+
+  .navMenu ul li a {
+    padding: 1.5rem;
+    align-items: flex-end;
+    border-top: 1px solid #adadad;
+  }
+
+  .navIcons {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
