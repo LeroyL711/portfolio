@@ -1,11 +1,39 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../css/navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+
 export default function Navbar() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
+  const sections = useRef<HTMLElement[]>([]);
+  const handleScroll = () => {
+    const scrollYPosition = window.scrollY;
+    let newActiveSection = null;
+
+    sections.current.forEach((sectionRef) => {
+      const section = sectionRef as HTMLElement;
+      const sectionOffsetTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (scrollYPosition >= sectionOffsetTop - 100 && scrollYPosition < sectionOffsetTop + sectionHeight){
+        newActiveSection = section.id;
+      }
+    });
+
+    setActiveSection(newActiveSection);
+  };
+
+  useEffect(() => {
+    sections.current = Array.from(document.querySelectorAll('[data-section]'));
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <nav>
@@ -27,22 +55,22 @@ export default function Navbar() {
         {/* Separated desktop and mobile navs due to content flash from opacity changes and transition */}
         <div className={`desktopNav`}>
           <ul>
-            <li>
+            <li className={activeSection === 'landing' ? 'active' : ''}>
               <Link href="/">
                 Home
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'about' ? 'active' : ''}>
               <Link href="#about">
                 About
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'projects' ? 'active' : ''}>
               <Link href="#projects">
                 Projects
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'contact' ? 'active' : ''}>
               <Link href="#contact">
                 Contact
               </Link>

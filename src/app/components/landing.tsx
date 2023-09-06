@@ -5,7 +5,7 @@ import styles from "../css/landing.module.css";
 
 export default function Landing() {
   return (
-    <section className={styles.hero} id={styles.landing}>
+    <section className={styles.hero} id="landing" data-section>
       <div className={styles.socials}>
         <ul>
           <li>

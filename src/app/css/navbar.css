@@ -24,6 +24,10 @@
     display: none;
 }
 
+.active {
+  color: #635baa;
+}
+
 .navMenu ul, .desktopNav ul {
   display: flex;
   justify-content: space-between;
@@ -50,7 +54,7 @@
 }
 
 .navMenu ul li:hover, .desktopNav ul li:hover {
-  color: #635baa;
+  color: #968bf8;
 }
 
 .navIcons {
