@@ -1,9 +1,15 @@
+.contactSection{
+    padding: 5rem 0;
+}
+
+
 .mainContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100dvh - 80px);
+    min-height: 100dvh;
+    margin: 5rem 0;
 }
 
 .formHeader{
@@ -29,6 +35,12 @@
     margin: 5px 0 15px 0;
     border-radius: 5px;
     resize: none;
+    font-family: var(--font-rubik);
+    font-size: 13px;
+}
+
+.formContainer input:focus, .formContainer textarea:focus{
+    outline: none;
 }
 
 .submitBtnContainer{

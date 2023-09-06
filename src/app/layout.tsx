@@ -1,7 +1,11 @@
 import { Rubik } from 'next/font/google'
 import Navbar from './components/navbar';
 import './globals.css';
-const rubik = Rubik({ subsets: ['latin'] })
+const rubik = Rubik({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-rubik'
+});
 
 export const metadata = {
   title: 'Leroy Lau | CST Student',
