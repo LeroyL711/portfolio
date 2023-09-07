@@ -4,12 +4,12 @@
   align-items: center;
   max-width: 100rem;
   margin: auto;
-  padding: 5rem 0;
+  padding: 3rem 0;
   min-height: 100dvh;
 }
 
 .aboutContainer{
-    max-width: 50rem;
+    max-width: 70dvw;
 }
 
 .aboutHeader{
@@ -18,8 +18,71 @@
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.aboutContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .aboutText {
-    color: #5a6475;
+    width: 45%;
+    margin-top: 30px;
+    color: #464d58;
+    font-size: 18px;
+}
+
+.skillsSection{
+    width: 45%;
+    text-align: center;
+    color: #464d58;
+    height: inherit;
+}
+
+.skillsHeading{
+    padding-bottom: 3rem;
+}
+
+.aboutSkills{
+    list-style: none;
+    /* max-width: 500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aboutSkill{
+    background-color: #464d586e;
+    padding: 0.75rem 1.25rem;
+    margin: 8px;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .aboutContainer{
+        max-width: 80dvw;
+    }
+
+    .aboutContent{
+        flex-direction: column;
+    }
+
+    .aboutText{
+        width: 100%;
+    }
+
+    .skillsSection{
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    .skillsHeading{
+        padding-bottom: 1rem;
+    }
+    
 }

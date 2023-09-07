@@ -49,11 +49,11 @@ export default function Landing() {
             I've worked on, as well as more about myself!
           </div>
         </div>
-        <div className={styles.heroImage}>
+        <div className={styles.heroImageContainer}>
           <Image
+            className={styles.heroImage}
             src={laptopPic}
-            width={800}
-            height={500}
+            fill
             alt="Colourful picture of a laptop"
           />
         </div>

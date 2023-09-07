@@ -36,14 +36,24 @@
     border-radius: 10px;
 }
 
-.formContainer input, .formContainer textarea {
-    width: 500px;
-    padding: 0.75rem;
-    margin: 5px 0 15px 0;
+.fieldLabel{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.formField{
+    margin-bottom: 2rem;
+}
+
+.formInput{
+    width: 100%;
+    padding: 1.5rem;
     border-radius: 5px;
     resize: none;
     font-family: var(--font-rubik);
-    font-size: 13px;
+    font-size: 14px;
+    border: none;
 }
 
 .formContainer input:focus, .formContainer textarea:focus{
@@ -59,4 +69,24 @@
     justify-self: right;
     width: 200px;
     cursor: pointer;
+    padding: 0.75rem;
+    font-family: var(--font-rubik);
+}
+
+@media only screen and (max-width: 700px) {
+    .formContainer{
+        width: 90%;
+    }
+
+    .formDescription{
+        max-width: 400px;
+    }
+
+    .formField{
+        margin-bottom: 1rem;
+    }
+    .formInput{
+        padding: 1rem;
+    }
+
 }
