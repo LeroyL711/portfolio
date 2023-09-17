@@ -8,6 +8,7 @@
   width: 100%;
   position: fixed;
   z-index: 100;
+  box-shadow: 2px 3px 6px rgba(0,0,0, 0.5);
 }
 
 .navLogo {
@@ -25,7 +26,8 @@
 }
 
 .active {
-  color: #635baa;
+  color: #968bf8;
+  background-color: rgba(141, 140, 140, 0.199);
 }
 
 .navMenu ul, .desktopNav ul {
@@ -40,7 +42,10 @@
 }
 
 .desktopNav ul li {
-  margin: 0 1rem;
+  display: block;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 10px;
   transition: 0.3s;
   scroll-behavior: smooth;
 }
@@ -54,7 +59,7 @@
 }
 
 .navMenu ul li:hover, .desktopNav ul li:hover {
-  color: #968bf8;
+  color: #635baa;
 }
 
 .navIcons {
