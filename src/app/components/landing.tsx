@@ -40,7 +40,7 @@ export default function Landing() {
       </div>
       <div className={styles.mainContainer}>
         <div className={styles.landingHeading}>
-          Hey, I'm <span className={styles.name}>Leroy Lau<span className={styles.period}>.</span></span>
+          Hey, I&apos;m <span className={styles.name}>Leroy Lau<span className={styles.period}>.</span></span>
         </div>
         <div className={styles.landingText}>
         A self-motivated, collaborative, and lifelong learner with a passion for problem-solving in the ever-evolving world of web development.
