@@ -46,6 +46,15 @@
     align-items: center;
 }
 
+.lineDeco{
+    position: absolute;
+    bottom: 200px;
+    width: 30%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #4b4b81;
+}
+
 .landingHeading{
     color: rgba(29, 29, 29, 0.747);
 

@@ -45,6 +45,7 @@ export default function Landing() {
         <div className={styles.landingText}>
         A self-motivated, collaborative, and lifelong learner with a passion for problem-solving in the ever-evolving world of web development.
         </div>
+        <div className={styles.lineDeco}></div>
       </div>
     </section>
   );

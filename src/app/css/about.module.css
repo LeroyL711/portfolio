@@ -23,7 +23,7 @@
 
 .aboutContent{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -35,10 +35,10 @@
 }
 
 .skillsSection{
-    width: 45%;
+    width: 40%;
     text-align: center;
-    color: #464d58;
-    height: inherit;
+    color: #464d58;;
+
 }
 
 .skillsHeading{
