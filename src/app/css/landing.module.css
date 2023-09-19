@@ -11,7 +11,7 @@
     background-color: #f3f2f2;
     color: black;
     position: absolute;
-    top: 130px;
+    top: 15%;
     right: 10%;
     z-index: 0;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
@@ -48,7 +48,7 @@
 
 .lineDeco{
     position: absolute;
-    bottom: 200px;
+    bottom: 15%;
     width: 30%;
     height: 8px;
     border-radius: 5px;
@@ -72,7 +72,7 @@
 }
 
 .period{
-    color: rgba(58, 58, 58, 0.747);
+    color: #4b4b81;
     font-size: 4rem;
 }
 .landingText{
@@ -90,5 +90,19 @@
 
     .name{
         font-size: 4.5rem;
+    }
+    
+    .period{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .name {
+        font-size: 3.75rem;
+    }
+
+    .period {
+        font-size: 2.5rem;
     }
 }

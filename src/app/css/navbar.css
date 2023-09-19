@@ -9,6 +9,7 @@
   position: fixed;
   z-index: 100;
   box-shadow: 2px 3px 6px rgba(0,0,0, 0.5);
+  color: white;
 }
 
 .navLogo {
@@ -77,6 +78,7 @@
   position: absolute;
   right: 25px;
   display: none;
+  color: rgb(105, 105, 105);
 }
 
 @media only screen and (max-width: 700px) {
@@ -84,7 +86,10 @@
   .desktopNav {
     display: none;
   }
-  
+
+  .navContainer{
+    height: 80px;
+  }
   .navMenu {
     display: block;
   }
